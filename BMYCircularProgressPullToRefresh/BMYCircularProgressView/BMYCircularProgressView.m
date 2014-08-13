@@ -38,9 +38,9 @@
         _frontCircleLayer = [CAShapeLayer layer];
         _pieLayer = [CAShapeLayer layer];
         
-        [self.layer addSublayer:_logoLayer];
         [self.layer addSublayer:_backCircleLayer];
         [self.layer addSublayer:_frontCircleLayer];
+        [self.layer addSublayer:_logoLayer];
         [self.layer addSublayer:_pieLayer];
         
         _logoLayer.contents = (__bridge id)[logoImage CGImage];
