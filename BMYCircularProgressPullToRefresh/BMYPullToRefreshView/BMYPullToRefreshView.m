@@ -191,6 +191,15 @@ static CGFloat const kPullToRefreshDragToTrigger = 80;
     self.activityIndicatorView.activityIndicatorViewStyle = viewStyle;
 }
 
+- (void)setPreserveContentInset:(BOOL)preserveContentInset{
+    if (_preserveContentInset != preserveContentInset) {
+        _preserveContentInset = preserveContentInset;
+
+        if (self.bounds.size.height > 0.0f) {
+            [self _resetFrame];
+        }
+    }
+}
 #pragma mark - Scroll View
 
 - (void)_resetScrollViewContentInset {
